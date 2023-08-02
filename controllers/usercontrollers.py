@@ -2,6 +2,8 @@ from models.user import User
 from dotenv import load_dotenv
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from flask_limiter import Limiter  # Importez Limiter
+
 from flask_limiter.util import get_remote_address
 
 # Charger les variables d'environnement depuis le fichier .env
